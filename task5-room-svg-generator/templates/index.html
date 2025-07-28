@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zone Room Layout Generator</title>
+  <style>
+    body { font-family: sans-serif; padding-top: 100px; text-align: center; }
+    input, button { padding: 10px; font-size: 16px; }
+    button {
+      background: #28a745; color: white; border: none; cursor: pointer;
+    }
+    button:hover { background: #218838; }
+  </style>
+</head>
+<body>
+  <h1>Upload Room CSV to Generate Layouts</h1>
+  <form action="/" method="POST" enctype="multipart/form-data">
+    <input type="file" name="csvfile" accept=".csv" required>
+    <button type="submit">Generate Layout</button>
+  </form>
+</body>
+</html>
