@@ -1,0 +1,34 @@
+<form method="post">
+  <input name="email" placeholder="Designer Email" required><br>
+  <input name="subject" placeholder="Reminder Subject (e.g., Team Meeting)" required><br>
+  <input type="date" name="date" required><br>
+  <input type="time" name="time" required><br>
+  <select name="type" required>
+    <option value="Meeting">Meeting</option>
+    <option value="Task">Task</option>
+    <option value="Deadline">Deadline</option>
+    <option value="Other">Other</option>
+  </select><br>
+  <button type="submit">Schedule Reminder</button>
+</form>
+<h2>Scheduled Reminders</h2>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Email</th>
+    <th>Subject</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Type</th>
+  </tr>
+  {% for r in reminders %}
+  <tr>
+    <td>{{ r[0] }}</td>
+    <td>{{ r[1] }}</td>
+    <td>{{ r[2] }}</td>
+    <td>{{ r[4] }}</td>
+    <td>{{ r[5] }}</td>
+    <td>{{ r[6] }}</td>
+  </tr>
+  {% endfor %}
+</table>
